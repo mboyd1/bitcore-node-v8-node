@@ -157,7 +157,7 @@ Step7(options)
 //if you install pm2 please choose step7.1 to run the bitcoin-cash server.  
 Step 8.1  
 ```cd ~/bicore-node```   
-```pm2 start "/usr/bin/npm" --name "BCHAPISERVER" -- start```  
+```pm2 start "/usr/bin/npm" --name "BSVAPISERVER" -- start```  
 
 //if you didin't install pm2,please choose step7.2 to run the bitcoin-cash server.   
 Step8.2  
