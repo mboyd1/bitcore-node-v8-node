@@ -1,7 +1,7 @@
 Ubuntu 18.04 OS
 
 Step1  
-//Install node.js,the node .js version is v8.11.3. and  npm version 5.6.0  
+//Install node.js,the node .js version is v8.15.0 and  npm version 6.4.1  
 ```curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -```  
 ```sudo apt-get install -y nodejs```  
 
