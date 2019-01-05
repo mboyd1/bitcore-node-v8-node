@@ -1,4 +1,4 @@
-Ubuntu 16.04 OS
+Ubuntu 18.04 OS
 
 Step1  
 //Install node.js,the node .js version is v8.11.3. and  npm version 5.6.0  
@@ -7,22 +7,24 @@ Step1
 
 Step2  
 //Install mongoDB and run it
-https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/  
-```sudo service mongod start```
+```apt-get install mongodb```
+```service mongodb start```
 
 Step3  
-//Install bitcoinABC's bitcoind (version is 0.17.2)   
-```sudo apt-get install software-properties-common```  
-```sudo add-apt-repository ppa:bitcoin-abc/ppa```  
-```sudo apt-get update```  
-```sudo apt-get install bitcoind```  
-
+//Install bitcoin-sv's bitcoind (version is v0.1.0.0)   
+```sudo apt-get install git build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libzmq3-dev libdb-dev libdb++-dev```  
+```git clone https://github.com/bitcoin-sv/bitcoin-sv.git```  
+```cd bitcoin-sv```  
+```./autogen.sh```  
+```./configure```  
+```make```  
+```sudo make install```  
 
 Step4 
 //run bitcoind   
-```cd ~```  
-```touch bitcoin.conf```  
-```vi bitcoin.conf```  
+```mkdir ~/.bitcoin```  
+```touch ~/.bitcoin/bitcoin.conf```  
+```vi ~/.bitcoin/bitcoin.conf```  
 ```  
 datadir=[where you want to store the node data]
 server=1
@@ -37,14 +39,13 @@ zmqpubrawtxlock=tcp://127.0.0.1:28332
 zmqpubhashblock=tcp://127.0.0.1:28332
 rpcallowip=127.0.0.1
 rpcport=8332
-rpcuser=bch
+rpcuser=bsv
 rpcpassword=local321
 ```
 ```bitcoind -conf=/home/[user]/bitcoin.conf```  
 
 Step5  
 //Install bitcore-node  
-```sudo apt-get install libzmq3-dev build-essential```  
 ```git clone -b v8.0.0 https://github.com/bitpay/bitcore-node.git```  
 ```cd bitcore-node```  
 ```npm i ajv --save```  
@@ -128,7 +129,7 @@ const Config = function(): ConfigType {
           rpc: {
             host: "127.0.0.1",
             port: 8332,
-            username: "bch",
+            username: "bsv",
             password: "local321"
           }
         }
