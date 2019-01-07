@@ -1,18 +1,23 @@
 Ubuntu 18.04 OS
 
+Step0  
+//Install some basics that my docker container lacked  
+```sudo apt-get update```  
+```sudo apt-get install -y vim curl git gnupg sudo``` 
+
 Step1  
 //Install node.js,the node .js version is v8.15.0 and  npm version 6.4.1  
 ```curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -```  
 ```sudo apt-get install -y nodejs```  
 
 Step2  
-//Install mongoDB and run it
-```apt-get install mongodb```
-```service mongodb start```
+//Install mongoDB and run it  
+```apt-get install mongodb```  
+```sudo service start mongodb``` 
 
 Step3  
 //Install bitcoin-sv's bitcoind (version is v0.1.0.0)   
-```sudo apt-get install git build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libzmq3-dev libdb-dev libdb++-dev```  
+```sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libzmq3-dev libdb-dev libdb++-dev```  
 ```git clone https://github.com/bitcoin-sv/bitcoin-sv.git```  
 ```cd bitcoin-sv```  
 ```./autogen.sh```  
