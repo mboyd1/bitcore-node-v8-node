@@ -13,7 +13,7 @@ Step1
 Step2  
 //Install mongoDB and run it  
 ```sudo apt-get install mongodb```  
-```sudo service start mongodb``` 
+```sudo /etc/init.d/mongodb start``` 
 
 Step3  
 //Install bitcoin-sv's bitcoind (version is v0.1.0.0)   
