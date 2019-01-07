@@ -12,7 +12,7 @@ Step1
 
 Step2  
 //Install mongoDB and run it  
-```apt-get install mongodb```  
+```sudo apt-get install mongodb```  
 ```sudo service start mongodb``` 
 
 Step3  
